@@ -39,11 +39,17 @@ export class HeroOfTheMonthComponent {
 
   constructor(
       logger: MinimalLogger,
+      // logger2: LoggerService,
       public heroOfTheMonth: Hero,
       @Inject(RUNNERS_UP) public runnersUp: string,
       @Inject(TITLE) public title: string)
   {
     this.logs = logger.logs;
+    // logs 와 logInfo 만 보이게 된다. logger.logs, logger.logInfo
     logger.logInfo('starting up');
+    // logger2.logDebug('starting up');
+    // logger2.logError('starting up');
+    // logger2.logInfo('starting up');
+    // logger2.logs;
   }
 }
